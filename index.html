@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>سراج لتحفيظ القرآن الكريم أونلاين</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <header>
+    <h1>سراج لتحفيظ القرآن الكريم أونلاين</h1>
+    <p class="tag">حلقات تحفيظ ومراجعة وتصحيح تلاوة أونلاين</p>
+    <p>قدّم طلب الالتحاق من هنا، وهيوصل لنا على واتساب. الاشتراك بأسعار رمزية.</p>
+    <div class="mark"><img src="mark.png" alt="شعار حسين عبدالله: حرف H على صفحة داخل مدار ذهبي" width="56" height="56"><span>حسين عبدالله</span></div>
+  </header>
+
+  <nav aria-label="صفحات">
+    <button type="button" data-view="home" class="on">الرئيسية</button>
+    <button type="button" data-view="apply">الالتحاق</button>
+  </nav>
+
+  <section id="home" class="view">
+    <h2>المسارات المقترحة</h2>
+    <ol class="rows">
+      <li><b>حفظ جديد</b><span>حفظ مقدار يومي أو أسبوعي مع المتابعة.</span></li>
+      <li><b>مراجعة المحفوظ</b><span>تثبيت ما حفظه الطالب وتصحيح الأخطاء.</span></li>
+      <li><b>تصحيح التلاوة</b><span>تحسين النطق وأحكام التجويد الأساسية.</span></li>
+    </ol>
+        <h2>الاشتراك</h2>
+    <p>الاشتراك بأسعار رمزية. تواصل معنا لمعرفة الاشتراك ومواعيد الحصص.</p>
+    <h2>الخطوات</h2>
+    <ol class="steps">
+      <li>يملأ ولي الأمر أو الطالب نموذج الالتحاق ويراجع الرسالة.</li>
+      <li>يراجع المعلّم الطلب ويحدد مستوى الطالب.</li>
+      <li>نتواصل معك على واتساب للاتفاق على الاشتراك ومواعيد الحصص.</li>
+      <li>تبدأ الحصص أونلاين.</li>
+    </ol>
+    <button type="button" class="primary" data-view="apply">قدّم طلب الالتحاق</button>
+  </section>
+
+  <section id="apply" class="view" hidden>
+    <h2>نموذج الالتحاق</h2>
+    <p class="note">للأطفال، يُفضّل أن يملأ ولي الأمر الطلب. اكتب الاسم الأول فقط. لن نخزّن شيئًا على الموقع، والرسالة تُرسل من واتساب عندك بعد ما تراجعها.</p>
+    <form id="form" autocomplete="off">
+      <fieldset><legend>مقدم الطلب</legend>
+        <label><input type="radio" name="who" value="ولي أمر" checked> ولي أمر</label>
+        <label><input type="radio" name="who" value="الطالب نفسه"> الطالب نفسه</label>
+      </fieldset>
+      <label>اسم الطالب (الاسم الأول يكفي) <input name="name" type="text" required></label>
+      <label>السن <input name="age" type="text" inputmode="numeric" required></label>
+      <fieldset><legend>المستوى</legend>
+        <label><input type="radio" name="level" value="مبتدئ" checked> مبتدئ</label>
+        <label><input type="radio" name="level" value="يحفظ أجزاء"> يحفظ أجزاء</label>
+        <label><input type="radio" name="level" value="متقدم"> متقدم</label>
+      </fieldset>
+      <fieldset><legend>الهدف</legend>
+        <label><input type="radio" name="goal" value="حفظ جديد" checked> حفظ جديد</label>
+        <label><input type="radio" name="goal" value="مراجعة"> مراجعة</label>
+        <label><input type="radio" name="goal" value="تصحيح التلاوة"> تصحيح التلاوة</label>
+      </fieldset>
+      <button type="submit" class="primary">راجع الرسالة</button>
+    </form>
+    <div id="preview" hidden>
+      <h3>الرسالة اللي هتتبعت</h3>
+      <pre id="msg"></pre>
+      <p>لن يُرسل شيء إلا لما تضغط إرسال داخل واتساب.</p>
+      <a id="wa" class="button primary" target="_blank" rel="noopener">افتح واتساب للإرسال</a>
+    </div>
+    <button type="button" data-view="home">رجوع</button>
+  </section>
+
+  <footer>الموقع لا يخزّن أي بيانات. الطلب يُرسل فقط من واتساب عندك بعد مراجعتك له.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
